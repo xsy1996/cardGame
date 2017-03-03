@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/battle"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cardbattlegame.activity.GameActivity" >
+
+    <Button
+        android:id="@+id/Card1"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="78dp"
+        android:background="@drawable/cardback"
+        android:text="card1" />
+
+    <Button
+        android:id="@+id/Card2"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Card1"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/Card1"
+        android:background="@drawable/cardback"
+        android:text="card2" />
+
+    <Button
+        android:id="@+id/Card3"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Card2"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/Card2"
+        android:background="@drawable/cardback"
+        android:text="card3" />
+    
+    
+    <Button
+       	android:id="@+id/Card4"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/Card3"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/Card3"
+        android:background="@drawable/cardback"
+            android:text="card4" />
+
+    <LinearLayout
+        android:id="@+id/competitor_info"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background_login_div"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/competitor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/name"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/competitor_state1"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/state1"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/competitor_state2"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="@string/state2"
+            android:ems="10" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/battlePanel"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/Card2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/background_login_div"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/win"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility ="gone"
+                android:src="@drawable/win" />
+
+            <ImageView
+                android:id="@+id/fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility ="gone"
+                android:src="@drawable/fail" />
+
+			<TextView 
+				android:id="@+id/battleLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="battlelog"/>
+				
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heroState"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/competitor_info"
+            android:background="@drawable/background_login_div"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/state1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="@string/state1" />
+
+            <TextView
+                android:id="@+id/state2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:text="@string/state2" />
+        </LinearLayout>
+
+
+</RelativeLayout>
